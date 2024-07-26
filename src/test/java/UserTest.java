@@ -57,8 +57,6 @@ public class UserTest {
         user.setLogin("newUser");
         assertEquals("newUser", user.getLogin());
         assertNotNull(user.getLogin());
-        System.out.println(user);
-
     }
 
     @Test
@@ -71,7 +69,6 @@ public class UserTest {
         user.setPassword("newPassword");
         assertEquals("newPassword", user.getPassword());
         assertNotNull(user.getPassword());
-        System.out.println(user);
     }
 
     @Test
@@ -84,7 +81,6 @@ public class UserTest {
         user.setEmail("user@newemail.com");
         assertEquals("user@newemail.com", user.getEmail());
         assertNotNull(user.getEmail());
-        System.out.println(user);
     }
 
     @Test
