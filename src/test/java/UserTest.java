@@ -14,14 +14,14 @@ public class UserTest {
     }
 
     @Test
-    public void test_getLogin() {
+    public void getLogin_success() {
         assertEquals("user", user.getLogin());
         assertNotEquals("another user", user.getLogin());
         assertNotNull(user.getLogin());
     }
 
     @Test
-    public void test_getLogin_null() {
+    public void getLogin_null() {
         User user = new User(null, "password", "user@email.com");
         assertNull(user.getLogin());
     }
