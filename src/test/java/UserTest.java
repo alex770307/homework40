@@ -89,7 +89,7 @@ public class UserTest {
     }
 
     @Test
-    public void isValidPassword_validIsOk_success() {
+    public void isValidPassword_validation_success() {
         assertTrue(user.isValidPassword("password"));
         assertFalse(user.isValidPassword("false password"));
     }
