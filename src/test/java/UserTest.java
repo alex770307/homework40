@@ -14,82 +14,82 @@ public class UserTest {
     }
 
     @Test
-    public void getLogin_success() {
+    public void getLogin_loginOk_success() {
         assertEquals("user", user.getLogin());
         assertNotEquals("another user", user.getLogin());
         assertNotNull(user.getLogin());
     }
 
     @Test
-    public void getLogin_null() {
-        User user = new User(null, "password", "user@email.com");
+    public void getLogin_loginIsNull_success() {
+        user = new User(null, "password", "user@email.com");
         assertNull(user.getLogin());
     }
 
     @Test
-    public void getPassword_success() {
+    public void getPassword_passwordOk_success() {
         assertEquals("password", user.getPassword());
         assertNotEquals("false password", user.getPassword());
         assertNotNull(user.getPassword());
     }
 
     @Test
-    public void getPassword_null() {
-        User user = new User("user", null, "user@email.com");
+    public void getPassword_passwordIsNull_success() {
+        user = new User("user", null, "user@email.com");
         assertNull(user.getPassword());
     }
 
     @Test
-    public void getEmail_success() {
+    public void getEmail_emailOk_success() {
         assertEquals("user@email.com", user.getEmail());
         assertNotEquals("user@Email.com", user.getEmail());
         assertNotNull(user.getEmail());
     }
 
     @Test
-    public void getEmail_null() {
-        User user = new User("user", "password", null);
+    public void getEmail_emailIsNull_success() {
+        user = new User("user", "password", null);
         assertNull(user.getEmail());
     }
 
     @Test
-    public void setLogin_success() {
+    public void setLogin_setIsOk_success() {
         user.setLogin("newUser");
         assertEquals("newUser", user.getLogin());
         assertNotNull(user.getLogin());
     }
 
     @Test
-    public void setLogin_throwsException() {
+    public void setLogin_throwsException_success() {
         assertThrows(IllegalArgumentException.class, () -> user.setLogin("ab"));
     }
 
     @Test
-    public void setPassword_success() {
+    public void setPassword_setIsOk_success() {
         user.setPassword("newPassword");
         assertEquals("newPassword", user.getPassword());
         assertNotNull(user.getPassword());
     }
 
     @Test
-    public void setPassword_throwsException() {
+    public void setPassword_throwsException_success() {
         assertThrows(IllegalArgumentException.class, () -> user.setPassword("abcd"));
     }
 
     @Test
-    public void setEmail_success() {
+    public void setEmail_setIsOk_success() {
         user.setEmail("user@newemail.com");
         assertEquals("user@newemail.com", user.getEmail());
         assertNotNull(user.getEmail());
     }
 
     @Test
-    public void setEmail_throwsException() {
+    public void setEmail_throwsException_success() {
         assertThrows(IllegalArgumentException.class, () -> user.setEmail("userNewEmail.com"));
     }
 
     @Test
-    public void isValidPassword_success() {
+    public void isValidPassword_validIsOk_success() {
         assertTrue(user.isValidPassword("password"));
         assertFalse(user.isValidPassword("false password"));
     }
